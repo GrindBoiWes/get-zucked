@@ -2,11 +2,11 @@
     "name": "get-zucked",
     "version": "1.0.1",
     "description": "Build an API for a social network",
-    "main": "index.js",
+    "main": "server.js",
     "license": "none",
     "scripts": {
-      "start": "node index",
-      "dev": "nodemon index",
+      "start": "node server",
+      "dev": "nodemon server",
       "seed": "node utils/seed",
       "heroku-postbuild": "node utils/seed.js"
     },
