@@ -1,4 +1,4 @@
-const { timeStamp } = require('console');
+const mongoose = require('mongoose');
 const { Schema, model } = require('mongoose');
 
 const ReactionSchema = new Schema (
@@ -22,7 +22,7 @@ const ReactionSchema = new Schema (
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (timeStamp) => new Date(timeStamp).toLocaleDateString(),
+            get: (timestamp) => new Date(timestamp).toLocaleDateString(),
         },
     
         toJSON: {
@@ -44,7 +44,7 @@ const ThoughtSchema = new Schema(
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (timeStamp) => new Date(timeStamp).toLocaleDateString(),
+            get: (timestamp) => new Date(timestamp).toLocaleDateString(),
         },
     
         username: {
