@@ -24,7 +24,8 @@ const ReactionSchema = new Schema (
             default: Date.now,
             get: (timestamp) => new Date(timestamp).toLocaleDateString(),
         },
-    
+    },
+    {
         toJSON: {
             getters: true,
         },
@@ -53,9 +54,9 @@ const ThoughtSchema = new Schema(
         },
    
         reactions: [ReactionSchema],
-    
+    },
+    {
         toJSON: {
-            virtuals: true,
             getters: true,
         },
         id: false,
