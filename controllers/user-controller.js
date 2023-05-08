@@ -1,4 +1,4 @@
-const { User } = require('../models');
+const { User } = require('../models/');
 
 const userController = {
     async getAllUsers(req,res) {
@@ -80,4 +80,4 @@ const userController = {
     }
 };
 
-module.esports = userController;
+module.exports = userController;
