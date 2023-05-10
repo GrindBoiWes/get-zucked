@@ -69,7 +69,7 @@ const userController = {
         try {
             const user = await User.findByIdAndUpdate(
                 req.params.userId,
-                { $pull: {friends: req.parmas.friendId }},
+                { $pull: {friends: req.params.friendId }},
                 { new: true }
             );
             res.json(user);
