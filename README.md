@@ -5,14 +5,14 @@ A Social Network for connecting with friends! Share your thoughts and react to y
  - [Features](#features)
  - [Installation](#installation)
  - [Video](#video)
- - [Credits](#credits)
+ - [Usage](#usage)
  - [License](#license)
 
 ## Features
 
  - Users: Create, read, update, and delete
  - Thoughts: Create, read, update and delete
- - Friends List: Add or Remove user's
+ - Friends List: Add or Remove users
  - Reactions: Add or Delete reactions to user thought
 
 ## Installation 
@@ -30,9 +30,9 @@ A Social Network for connecting with friends! Share your thoughts and react to y
 Google Drive: https://drive.google.com/file/d/1dK1U1NwKKMOa5a_DMfn26qtYRk_TxL1c/view
 
 
-## Credits
+## Usage
 
-Thanks to askbcs for troubleshooting my errors, mostly typos.. 
+For testing, use an API tool such as [Insomnia](https://insomnia.rest/) to make requests.
 
 ## License 
 
