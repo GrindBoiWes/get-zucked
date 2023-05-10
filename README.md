@@ -1,22 +1,34 @@
 # Get Zucked
-A Social Network for connecting with friends!
+A Social Network for connecting with friends! Share your thoughts and react to your friends thoughts! Don't forget to add your friends to your friends list!
 
 ## Table of Contents
- - [Description](#description)
- - [Screenshot](#screenshot)
- - [Links](#links)
+ - [Features](#features)
+ - [Installation](#installation)
+ - [Video](#video)
  - [Credits](#credits)
  - [License](#license)
 
-## Description
+## Features
 
+ - Users: Create, read, update, and delete
+ - Thoughts: Create, read, update and delete
+ - Friends List: Add or Remove user's
+ - Reactions: Add or Delete reactions to user thought
 
+## Installation 
 
-## Screenshot
+1. Clone Repository
 
-## Links
+2. Navigate to project directory
 
-Github: https://github.com/GrindBoiWes/get-zucked
+3. Install the required dependencies (npm i)
+
+4. Start the server (npm start)
+
+## Video
+
+Google Drive: https://drive.google.com/file/d/1dK1U1NwKKMOa5a_DMfn26qtYRk_TxL1c/view
+
 
 ## Credits
 
