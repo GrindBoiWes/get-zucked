@@ -2,7 +2,7 @@ const { Thought } = require('../models');
 const { User } = require('../models');
 
 const thoughtController = {
-
+// fetches all thoughts
   getAllThoughts(req,res) {
     Thought.find({})
       .then((dbThoughtData) => res.json(dbThoughtData))
@@ -11,7 +11,7 @@ const thoughtController = {
         res.status(500).json(err)
       });
   },
-
+// finds the user's thoughts based off of their id
   getThoughtById({ params }, res) {
     Thought.findOne({_id: params.thoughtId})
       .then((dbThoughtData) => {
@@ -26,7 +26,7 @@ const thoughtController = {
         res.status(400).json(err);
       });
   },
-
+// create a thought that is attached to the user id
   createThought({ body }, res) {
     Thought.create(body)
       .then((dbThoughtData) => {
@@ -46,7 +46,7 @@ const thoughtController = {
       .catch((err) => 
        res.json(err));
   },
-
+// updates thought based off of the user/thought id
   updateThought({ params, body}, res) {
     Thought.findOneAndUpdate({ _id: params.thoughtId }, body, {
         new: true,
@@ -62,7 +62,7 @@ const thoughtController = {
     .catch((err) =>
       res.json(err));
   },
-
+// deletes thoughts based off of the thought id
   deleteThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
       .then((dbThoughtData) => {
@@ -86,7 +86,7 @@ const thoughtController = {
       .catch((err) => 
         res.status(400).json(err));
       },
-
+// add's a reaction and links it with the user/thought id
   addReaction({ params, body }, res) {
     Thought.findOneAndUpdate(
         { _id: params.thoughtId },
@@ -103,7 +103,7 @@ const thoughtController = {
     .catch((err) =>
       res.json(err));
   },
-
+// deletes a reaction using the thought and reaction id
   removeReaction({ params }, res) {
     Thought.findOneAndUpdate(
         { _id: params.thoughtId },

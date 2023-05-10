@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-
+// Creates user database with a username, email, thoughts, and friends
 const UserSchema = new Schema ({
     username: {
         type: String,
@@ -35,7 +35,7 @@ const UserSchema = new Schema ({
     },
     id: false,
   });
-
+// This will return the length of the friends array
   UserSchema.virtual('friendCount').get(function () {
     return this.friends.length;
   });

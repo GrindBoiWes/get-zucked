@@ -1,5 +1,5 @@
 const { User } = require('../models/');
-
+// fetches all users
 const userController = {
     async getAllUsers(req,res) {
         try {
@@ -10,7 +10,7 @@ const userController = {
             res.status(500).json(err)
         }
     },
-    
+// finds user based off of their unique id 
     async getUserById(req,res) {
         try {
             const user = await User.findById(req.params.id).populate('thoughts').populate('friends');
@@ -20,7 +20,7 @@ const userController = {
             res.status(500).json(err);
         }
     },
-
+// creates a new user and assigns it a unique id
     async createUser(req,res) {
         try {
             const user = await User.create(req.body);
@@ -30,7 +30,7 @@ const userController = {
             res.status(500).json(err)
         }
     },
-
+// updates user by finding their id
     async updateUser(req,res) {
         try {
             const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true});
@@ -40,7 +40,7 @@ const userController = {
             res.status(500).json(err);
         }
     },
-
+// deletes user by user id
     async deleteUser(req,res) {
         try {
             const user = await User.findByIdAndDelete(req.params.id);
@@ -50,7 +50,7 @@ const userController = {
             res.status(500).json(err)
         }
     },
-
+// adds a friend through their user id
     async addFriend(req,res) {
         try {
             const user = await User.findByIdAndUpdate(
@@ -64,7 +64,7 @@ const userController = {
             res.status(500).json(err)
         }
     },
-
+// deletes a user through their unique id
     async removeFriend(req,res) {
         try {
             const user = await User.findByIdAndUpdate(
